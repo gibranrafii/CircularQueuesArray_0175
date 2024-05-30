@@ -50,7 +50,7 @@ public:
             FRONT = -1;
             REAR = -1;
         }
-        else {  // Jika elemen yang dihapus berada di posisi terakhir array, kembali ke awal array
+        else {  // Jika elemen yang dihapus berada di posisi terakhir array, kembali kke awal array
             if (FRONT == max - 1)
                 FRONT = 0;
             else
@@ -58,6 +58,20 @@ public:
         }
     }
 
+    void display() {
+
+        int FRONT_Position = FRONT;
+        int REAR_Position = REAR;
+
+        // Cek apakah antrian kosong
+        if (FRONT_Position == -1) {
+            cout << "Queue is empty\n";
+            return;
+        }
+
+        cout << "\nElements in the queue are...\n";
+
+    }
 };
 
 int main()
